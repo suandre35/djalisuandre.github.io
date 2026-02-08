@@ -46,7 +46,7 @@ function App() {
       <section className="relative min-h-screen w-full snap-center overflow-hidden flex flex-col justify-center px-6 md:px-20 shrink-0">
         
         {/* VIDEO BACKGROUND */}
-        <div className="absolute inset-0 z-0">
+        {/* <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-black/60 z-10"></div>
           <video 
             autoPlay loop muted playsInline
@@ -54,6 +54,17 @@ function App() {
           >
             <source src="https://assets.mixkit.co/videos/preview/mixkit-software-developer-working-on-code-monitor-close-up-1728-large.mp4" type="video/mp4" />
           </video>
+        </div> */}
+
+        {/* PHOTO BACKGROUND */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-black/60 z-10"></div> {/* Overlay Gelap Tetap Ada */}
+          
+          <img 
+            src="./src/assets/img/hero.png"
+            alt="Hero Background"
+            className="w-full h-full object-cover opacity-80"
+          />
         </div>
 
         {/* CONTENT HERO */}
