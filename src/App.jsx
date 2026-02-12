@@ -86,8 +86,9 @@ function App() {
               <MenuItem title="About" href="#about" subtitle="01 — Identity" />
               <MenuItem title="Skills" href="#skills" subtitle="02 — Arsenal" />
               <MenuItem title="Blog" href="#blog" subtitle="03 — Thoughts" />
-              <MenuItem title="Projects" href="#projects" subtitle="04 — Works" />
-              <MenuItem title="Contact" href="#contact" subtitle="05 — Connect" />
+              <MenuItem title="Experiences" href="#experiences" subtitle="04 - Background" />
+              <MenuItem title="Projects" href="#projects" subtitle="05 — Works" />
+              <MenuItem title="Contact" href="#contact" subtitle="06 — Connect" />
             </div>
 
           </div>
@@ -205,9 +206,10 @@ function App() {
             <Database className="w-8 h-8 text-neutral-400 mb-4" />
             <h4 className="text-xl font-bold text-white mb-4">Backend & DB</h4>
             <ul className="space-y-2 text-neutral-400 font-mono text-sm">
-              <li>Laravel (Expert)</li>
+              <li>Laravel</li>
               <li>PHP 8.x</li>
               <li>MySQL / PostgreSQL</li>
+              <li>Go Lang</li>
               <li>RESTful APIs</li>
             </ul>
           </div>
@@ -217,6 +219,7 @@ function App() {
             <Code className="w-8 h-8 text-neutral-400 mb-4" />
             <h4 className="text-xl font-bold text-white mb-4">Frontend & UI</h4>
             <ul className="space-y-2 text-neutral-400 font-mono text-sm">
+              <li>Laravel</li>
               <li>React.js (Vite)</li>
               <li>Tailwind CSS</li>
               <li>Framer Motion</li>
@@ -229,7 +232,7 @@ function App() {
             <Terminal className="w-8 h-8 text-neutral-400 mb-4" />
             <h4 className="text-xl font-bold text-white mb-4">System & Tools</h4>
             <ul className="space-y-2 text-neutral-400 font-mono text-sm">
-              <li>Linux (Arch/Debian)</li>
+              <li>Linux (Arch)</li>
               <li>Git & GitHub</li>
               <li>VS Code / Neovim</li>
               <li>Postman</li>
@@ -259,9 +262,51 @@ function App() {
         </div>
       </Section>
 
+      {/* === 5. EXPERIENCES SECTION === */}
+      <Section id="experiences" title="04 — Selected Works">
+        <div className="grid md:grid-cols-3 gap-8">
+          
+          {/* Project 1 */}
+          <div className="group relative aspect-video bg-neutral-900 rounded-lg overflow-hidden border border-neutral-800">
+            {/* Image Placeholder */}
+            <div className="absolute inset-0 bg-neutral-800 group-hover:scale-105 transition-transform duration-700">
+              {/* <img src="/kpi-project.png" className="w-full h-full object-cover" /> */}
+              <div className="w-full h-full flex items-center justify-center text-neutral-700 font-mono">Multimedia Bhakti Luhur Temple</div>
+            </div>
+            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6">
+              <h4 className="text-2xl font-bold text-white">Multimedia Team</h4>
+              <p className="text-neutral-300 mt-2">Visual • Audio • OBS Studio</p>
+              <a href="#" className="mt-4 px-4 py-2 border border-white text-white text-sm hover:bg-white hover:text-black transition-colors">View Case Study</a>
+            </div>
+          </div>
 
-      {/* === 5. PROJECTS SECTION === */}
-      <Section id="projects" title="04 — Selected Works">
+          {/* Project 2 */}
+          <div className="group relative aspect-video bg-neutral-900 rounded-lg overflow-hidden border border-neutral-800">
+            <div className="absolute inset-0 bg-neutral-800 group-hover:scale-105 transition-transform duration-700">
+              <div className="w-full h-full bg-purple-900/20 flex items-center justify-center text-neutral-700 font-mono">Image: MDPTV</div>
+            </div>
+            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6">
+              <h4 className="text-2xl font-bold text-white">Programming UMDP</h4>
+              <p className="text-neutral-300 mt-2">Game Designer • Web Developer</p>
+            </div>
+          </div>
+
+          {/* Project 3 */}
+          <div className="group relative aspect-video bg-neutral-900 rounded-lg overflow-hidden border border-neutral-800">
+            <div className="absolute inset-0 bg-neutral-800 group-hover:scale-105 transition-transform duration-700">
+              <div className="w-full h-full bg-purple-900/20 flex items-center justify-center text-neutral-700 font-mono">Image: MDPTV</div>
+            </div>
+            <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6">
+              <h4 className="text-2xl font-bold text-white">MDPTV</h4>
+              <p className="text-neutral-300 mt-2">Graphic Design • Adobe Photoshop • Affinity by Canva</p>
+            </div>
+          </div>
+
+        </div>
+      </Section>
+
+      {/* === 6. PROJECTS SECTION === */}
+      <Section id="projects" title="05 — Selected Works">
         <div className="grid md:grid-cols-2 gap-8">
           
           {/* Project 1 */}
@@ -293,7 +338,7 @@ function App() {
       </Section>
 
 
-      {/* === 6. CONTACT SECTION === */}
+      {/* === 7. CONTACT SECTION === */}
       <Section id="contact" title="05 — Get In Touch" className="pb-0 border-b-0">
         <div className="py-20 text-center">
           <h2 className="text-4xl md:text-7xl font-bold text-white mb-8 tracking-tighter">
