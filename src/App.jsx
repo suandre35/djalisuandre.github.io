@@ -2,8 +2,8 @@ import React from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
-import Blog from './components/Blog';
 import Experience from './components/Experience';
+import Blog from './components/Blog';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
@@ -15,8 +15,8 @@ function App() {
       <Hero />
       <About />
       <Skills />
-      <Blog />
       <Experience />
+      <Blog />
       <Projects />
       <Contact />
     </div>

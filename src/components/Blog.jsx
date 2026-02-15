@@ -8,7 +8,7 @@ const Blog = () => {
   // - Render static blog entries with a slight delay for each item
   // - Animation: Slide in from left (-20px) and fade in
   return (
-    <Section id="blog" title="03 — Recent Thoughts">
+    <Section id="blog" title="04 — Recent Thoughts">
         <div className="space-y-4">
           {[1, 2, 3].map((item, index) => (
             <motion.div 

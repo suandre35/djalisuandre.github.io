@@ -53,7 +53,7 @@ const Experience = () => {
   // - Map through experiences array
   // - Use dangerouslySetInnerHTML for description to render <strong> tags
   return (
-    <Section id="experiences" title="04 — Experience">
+    <Section id="experiences" title="03 — Experience">
         <div className="space-y-0">
           
           {experiences.map((exp, index) => (

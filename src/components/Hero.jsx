@@ -84,11 +84,11 @@ const Hero = () => {
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
-                    <MenuItem title="Blog" href="#blog" subtitle="03 — Thoughts" />
+                    <MenuItem title="Experiences" href="#experiences" subtitle="03 - Background" />
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
-                    <MenuItem title="Experiences" href="#experiences" subtitle="04 - Background" />
+                    <MenuItem title="Blog" href="#blog" subtitle="04 — Thoughts" />
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
