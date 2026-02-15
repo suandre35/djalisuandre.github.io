@@ -1,13 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Section from './Section';
-import profilePic from '../assets/img/profile.JPG';
+import ProgressiveImage from './ProgressiveImage';
+
+// Assets: Load both High-Res and Low-Res versions
+import profileHigh from '../assets/img/profile.jpg';      
+import profileLow from '../assets/img/profile-small.jpg'; 
 
 const About = () => {
   return (
     <Section id="about" title="01 — About Me">
         <div className="grid md:grid-cols-[1fr_1.5fr] gap-8 md:gap-12 items-center h-full">
-          {/* FOTO */}
+          
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -16,10 +20,18 @@ const About = () => {
           >
             <div className="relative group w-full max-w-[280px]">
               <div className="absolute -inset-3 border-2 border-neutral-800 rounded-xl group-hover:border-white/50 transition-colors duration-500"></div>
-              <div className="relative aspect-[3/4] bg-neutral-900 rounded-lg overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
-                <img src={profilePic} alt="Djali Suandre" className="w-full h-full object-cover"/>
-                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent"></div>
-                <div className="absolute bottom-3 left-3 bg-white/10 backdrop-blur-md border border-white/20 px-2 py-1 rounded-full flex items-center gap-2">
+              
+              <div className="relative aspect-[3/4] bg-neutral-900 rounded-lg overflow-hidden">
+                <ProgressiveImage
+                  src={profileHigh}
+                  placeholder={profileLow}
+                  alt="Djali Suandre"
+                  className="w-full h-full rounded-lg"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 to-transparent z-20 pointer-events-none"></div>
+                
+                <div className="absolute bottom-3 left-3 bg-white/10 backdrop-blur-md border border-white/20 px-2 py-1 rounded-full flex items-center gap-2 z-30">
                   <span className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span>
                   <span className="text-[10px] font-mono text-white">Open for Work</span>
                 </div>
@@ -27,7 +39,6 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* TEXT */}
           <div className="space-y-6 relative text-left">
             <motion.h3 
               initial={{ opacity: 0, y: 20 }}
@@ -68,6 +79,7 @@ const About = () => {
               </div>
             </motion.div>
           </div>
+
         </div>
     </Section>
   );

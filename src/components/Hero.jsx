@@ -2,12 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import MenuItem from './MenuItem';
-import heroPic from '../assets/img/hero.png';
+import heroPic from '../assets/img/hero.png'; 
 
 const Hero = () => {
+    // Config: Toggle background image here
+    // const useImageBackground = false;
     return (         
         <section className="relative min-h-screen w-full snap-center overflow-hidden flex flex-col justify-center px-6 md:px-20 shrink-0">
         
+        {/* Background Layer (Uncomment to use) */}
         {/* VIDEO BACKGROUND */}
         {/* <div className="absolute inset-0 z-0">
             <div className="absolute inset-0 bg-black/60 z-10"></div>
@@ -28,12 +31,10 @@ const Hero = () => {
             /> */}
         {/* </div> */}
 
-        {/* CONTENT HERO */}
         <div className="relative z-20 max-w-6xl w-full mx-auto h-full flex items-center">
             
             <div className="w-full md:w-1/2 flex flex-col items-start space-y-8"> 
             
-            {/* Intro Kecil */}
             {/* <div className="mb-2">
                 <h1 className="text-sm font-mono text-blue-400 mb-1">Hi, I'm Djali Suandre.</h1>
                 <p className="text-xs text-neutral-400 max-w-[250px]">
@@ -41,7 +42,6 @@ const Hero = () => {
                 </p>
             </div> */}
 
-            {/* Menu List */}
             <div className="flex flex-col items-start space-y-1 border-l border-white/10 pl-8">
                 <MenuItem title="About" href="#about" subtitle="01 — Identity" />
                 <MenuItem title="Skills" href="#skills" subtitle="02 — Arsenal" />
@@ -54,7 +54,6 @@ const Hero = () => {
             </div>
         </div>
 
-        {/* Scroll Indicator */}
         <motion.div 
             animate={{ y: [0, 10, 0] }} 
             transition={{ repeat: Infinity, duration: 2 }}

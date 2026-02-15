@@ -4,44 +4,47 @@ import { ArrowUpRight, Github, Terminal } from 'lucide-react';
 import Section from './Section';
 
 const Projects = () => {
+  // State management
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  // Fetching logic
   useEffect(() => {
     const fetchRepos = async () => {
       try {
         setLoading(true);
-        const response = await fetch('https://api.github.com/users/suandre35/repos?sort=updated&direction=desc');
         
-        if (!response.ok) throw new Error('Gagal mengambil data GitHub');
+        // Fetch repositories from GitHub API
+        const response = await fetch('https://api.github.com/users/suandre35/repos?sort=updated&direction=desc');
+        if (!response.ok) throw new Error('GitHub API Error');
 
         const data = await response.json();
         
-        // --- PERBAIKAN DI SINI ---
-        // Hapus syarat '&& repo.description'. 
-        // Cukup filter yang bukan 'fork' saja.
+        // Filter logic: Non-forks only, limit to 6 items
         const filtered = data.filter(repo => !repo.fork).slice(0, 6);
         
         setRepos(filtered);
       
       } catch (err) {
-        console.error("Error fetching GitHub:", err);
+        console.error("Fetch error:", err);
         setRepos([]); 
       } finally {
-        setLoading(false);
+        setLoading(false); // Ensure loading stops
       }
     };
 
     fetchRepos();
   }, []);
 
+  // UI Logic: 
+  // - Show Skeleton if loading
+  // - Show Cards if data exists
+  // - Show Empty State if no data
   return (
     <Section id="projects" title="05 — Open Source">
-        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
           {loading ? (
-             // LOADING SKELETON
             [1, 2, 3].map((i) => (
               <div key={i} className="h-48 rounded-xl bg-neutral-900/50 border border-neutral-800 animate-pulse p-6 flex flex-col justify-between">
                  <div className="flex justify-between">
@@ -56,7 +59,6 @@ const Projects = () => {
               </div>
             ))
           ) : repos.length > 0 ? (
-            // DATA ASLI
             repos.map((repo, index) => (
               <motion.div 
                 key={repo.id}
@@ -85,8 +87,6 @@ const Projects = () => {
                   <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-400 transition-colors line-clamp-1 capitalize">
                     {repo.name.replace(/-/g, ' ')}
                   </h3>
-
-                  {/* Penanganan jika deskripsi NULL */}
                   <p className="text-sm text-neutral-400 leading-relaxed mb-4 line-clamp-3">
                     {repo.description ? repo.description : "No description provided."}
                   </p>
@@ -99,7 +99,6 @@ const Projects = () => {
                       {repo.language}
                     </span>
                   )}
-                  
                   <span className="text-xs font-mono text-neutral-600 ml-auto">
                     {new Date(repo.updated_at).getFullYear()}
                   </span>
@@ -107,7 +106,6 @@ const Projects = () => {
               </motion.div>
             ))
           ) : (
-            // JIKA KOSONG BENERAN
             <div className="col-span-full text-center py-10 text-neutral-500">
               <p>No public repositories found.</p>
             </div>
@@ -124,7 +122,7 @@ const Projects = () => {
             View all repositories on GitHub &rarr;
           </a>
         </div>
-      </Section>
+    </Section>
   );
 };
 
