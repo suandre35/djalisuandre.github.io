@@ -65,6 +65,7 @@ const Projects = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: false }}
                 className="group flex flex-col justify-between p-6 bg-neutral-900/50 border border-neutral-800 rounded-xl hover:border-blue-500/50 hover:bg-neutral-900 transition-all duration-300 h-full"
               >
                 <div>

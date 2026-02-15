@@ -16,6 +16,7 @@ const About = () => {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: false }}
             className="flex justify-center md:justify-end"
           >
             <div className="relative group w-full max-w-[280px]">
@@ -44,6 +45,7 @@ const About = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
+              viewport={{ once: false }}
               className="text-2xl md:text-4xl font-bold leading-tight"
             >
               From <span className="text-neutral-500 line-through decoration-red-500/50">Nothing</span> <br/>
@@ -54,6 +56,7 @@ const About = () => {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
+              viewport={{ once: false }}
               className="space-y-3 text-neutral-400 leading-relaxed text-sm font-light"
             >
               <p><strong className="text-white">Halo, I'm Djali Suandre.</strong> A fresh graduate in Information Systems based in Palembang.</p>
@@ -65,6 +68,7 @@ const About = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
+              viewport={{ once: false }}
               className="grid grid-cols-2 gap-4 pt-4 border-t border-neutral-800"
             >
               <div>
