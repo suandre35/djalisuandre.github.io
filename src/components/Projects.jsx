@@ -48,7 +48,7 @@ const Projects = () => {
   };
 
   return (
-    <Section id="projects" title="05 — Open Source">
+    <Section id="projects" title="04 — Open Source">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           
           {loading ? (

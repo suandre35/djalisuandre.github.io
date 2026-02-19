@@ -87,16 +87,16 @@ const Hero = () => {
                     <MenuItem title="Experiences" href="#experiences" subtitle="03 - Background" />
                 </motion.div>
 
-                <motion.div variants={itemVariants}>
+                {/* <motion.div variants={itemVariants}>
                     <MenuItem title="Blog" href="#blog" subtitle="04 — Thoughts" />
+                </motion.div> */}
+
+                <motion.div variants={itemVariants}>
+                    <MenuItem title="Projects" href="#projects" subtitle="04 — Works" />
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
-                    <MenuItem title="Projects" href="#projects" subtitle="05 — Works" />
-                </motion.div>
-
-                <motion.div variants={itemVariants}>
-                    <MenuItem title="Contact" href="#contact" subtitle="06 — Connect" />
+                    <MenuItem title="Contact" href="#contact" subtitle="05 — Connect" />
                 </motion.div>
 
             </motion.div>

@@ -5,10 +5,10 @@ const ProgressiveImage = ({ src, placeholder, alt, className }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const handleLoad = () => {
-    // Simulate network delay (1.5s)
+    // Simulate network delay (0.3s)
     setTimeout(() => {
       setIsLoaded(true);
-    }, 1500); 
+    }, 300); 
   };
 
   // Render Strategy:

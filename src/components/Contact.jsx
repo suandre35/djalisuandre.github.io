@@ -9,7 +9,7 @@ const Contact = () => {
   // - Email: Fade up
   // - Footer: Fade in with delay
   return (
-    <Section id="contact" title="06 — Get In Touch" className="pb-0 border-b-0">
+    <Section id="contact" title="05 — Get In Touch" className="pb-0 border-b-0">
         <div className="py-20 text-center">
           
           <motion.h2 
